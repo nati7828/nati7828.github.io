@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* start nav bar */
+nav {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+nav p {
+    float: left;
+    /* font-family: 'Arial', Helvetica, sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: black;
+    line-height: 50px;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+#logo_div {
+    float: left;
+    display: flex;
+    height: 60px;
+    width: 80px;
+}
+
+#logo {
+    width: 100%;
+    height: 80%;
+    margin: auto;
+}
+
+
+nav ul{
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    font-weight: bolder;
+    font-size: 18px;
+    color: black;
+    padding: 19.5px 14px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+/* make a bottom border with hover effect  */
+
+nav>ul>li>a::after {
+    display: block;
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: rgb(206, 186, 126);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+nav>ul>li:hover>a::after {
+    width: 100%;
+}
+
+nav ul li:hover>a {
+    color: rgb(206, 186, 126);
+}
+
+/* taking care of the inside ul */
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 180px;
+}
+
+nav ul li ul li a {
+    padding: 12px 15px;
+    color: black;
+}
+
+nav ul li ul li a:hover {
+    color: rgb(206, 186, 126);
+}
+
+/* when the user hovers over the items in the inner ul, show the bottom border of the current parent li  */
+
+nav ul li ul li a:hover>nav>ul>li>a::after {
+    width: 100%;
+}
+/*/// end of nav bar ///*/
+
+p {
+    color: white;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh );
+    width: 100%;
+    background: url(img/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.content .my-auto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .my-auto p{
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    width: 50px;
+    max-width: 65px;
+    border-width: 3px;
+    border-color: rgb(206, 186, 126);
+    margin-bottom: 30px;
+  }
+
+.btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 300px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .btn-xl {
+    padding: 1rem 2rem; 
+  }
+  
+  .btn-primary {
+    background-color: rgb(206, 186, 126);
+    border-color:  rgb(206, 186, 126);
+}
+  
+  .btn-primary:hover {
+    background-color:  rgb(168, 150, 94);
+    border-color:   rgb(168, 150, 94);
+    border-width: 5px;
+    cursor: pointer;
+  }
+    
+
+
+footer {
+    display: flex;
+    height: 70px;
+    background-color: #444646;
+}
+
+footer .foot {
+    margin: auto;
+}
